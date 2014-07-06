@@ -1,5 +1,6 @@
 //---------------------------------------------------------------------------                                                                                                                                      //---------------------------------------------------------------------------
 #include <vcl.h>
+#include <math.h>
 #pragma hdrstop
 
 #include "Un_Calc.h"
@@ -52,7 +53,7 @@ void __fastcall TFrMain::BtDelClick(TObject *Sender)
   AnsiString s1=List->Strings[List->Count-1], s2;
   if (s1==",")
       flCom=0;
-  else if ((s1=="+")||(s1=="-")||(s1=="*")||(s1=="/"))
+  else if ((s1=="+")||(s1=="-")||(s1=="*")||(s1=="/")||(s1=="^"))
   {
       fl=0;
       L_Num->Delete(1); 
@@ -108,6 +109,8 @@ void __fastcall TFrMain::BtResClick(TObject *Sender)
       else
         s_res=FloatToStr(StrToFloat(L_Num->Strings[0])/StrToFloat(s));
     }
+    else if (L_Num->Strings[1]=="^")
+      s_res=FloatToStr(pow(StrToFloat(L_Num->Strings[0]),StrToFloat(s)));
   }
   catch(...)
   {
@@ -122,7 +125,7 @@ void __fastcall TFrMain::BtResClick(TObject *Sender)
   List->Add(s_res);
   flRes=1;
   Ed1->SetFocus();
-  Ed1->SelStart=strL+1;
+  Ed1->SelStart=s_res.Length()+1;
   FileSetAttr("hist.calc",32);
   L_Hist->SaveToFile("hist.calc");
   FileSetAttr("hist.calc",6);

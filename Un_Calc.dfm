@@ -1,6 +1,6 @@
 object FrMain: TFrMain
-  Left = 1561
-  Top = 259
+  Left = 1579
+  Top = 215
   BorderStyle = bsDialog
   Caption = #1050#1072#1083#1100#1082#1091#1083#1103#1090#1086#1088
   ClientHeight = 316
@@ -34,7 +34,7 @@ object FrMain: TFrMain
   end
   object Bt0: TButton
     Left = 16
-    Top = 224
+    Top = 264
     Width = 41
     Height = 33
     Caption = '0'
@@ -50,7 +50,7 @@ object FrMain: TFrMain
   end
   object Bt1: TButton
     Left = 16
-    Top = 184
+    Top = 224
     Width = 41
     Height = 33
     Caption = '1'
@@ -66,7 +66,7 @@ object FrMain: TFrMain
   end
   object Bt2: TButton
     Left = 64
-    Top = 184
+    Top = 224
     Width = 41
     Height = 33
     Caption = '2'
@@ -82,7 +82,7 @@ object FrMain: TFrMain
   end
   object Bt3: TButton
     Left = 112
-    Top = 184
+    Top = 224
     Width = 41
     Height = 33
     Caption = '3'
@@ -98,7 +98,7 @@ object FrMain: TFrMain
   end
   object Bt4: TButton
     Left = 16
-    Top = 144
+    Top = 184
     Width = 41
     Height = 33
     Caption = '4'
@@ -114,7 +114,7 @@ object FrMain: TFrMain
   end
   object Bt5: TButton
     Left = 64
-    Top = 144
+    Top = 184
     Width = 41
     Height = 33
     Caption = '5'
@@ -130,7 +130,7 @@ object FrMain: TFrMain
   end
   object Bt6: TButton
     Left = 112
-    Top = 144
+    Top = 184
     Width = 41
     Height = 33
     Caption = '6'
@@ -146,7 +146,7 @@ object FrMain: TFrMain
   end
   object Bt7: TButton
     Left = 16
-    Top = 104
+    Top = 144
     Width = 41
     Height = 33
     Caption = '7'
@@ -162,7 +162,7 @@ object FrMain: TFrMain
   end
   object Bt8: TButton
     Left = 64
-    Top = 104
+    Top = 144
     Width = 41
     Height = 33
     Caption = '8'
@@ -178,7 +178,7 @@ object FrMain: TFrMain
   end
   object Bt9: TButton
     Left = 112
-    Top = 104
+    Top = 144
     Width = 41
     Height = 33
     Caption = '9'
@@ -194,7 +194,7 @@ object FrMain: TFrMain
   end
   object BtCom: TButton
     Left = 64
-    Top = 224
+    Top = 264
     Width = 41
     Height = 33
     Caption = ','
@@ -210,7 +210,7 @@ object FrMain: TFrMain
   end
   object BtRes: TButton
     Left = 112
-    Top = 224
+    Top = 264
     Width = 41
     Height = 33
     Caption = '='
@@ -226,7 +226,7 @@ object FrMain: TFrMain
   end
   object BtPlus: TButton
     Left = 168
-    Top = 104
+    Top = 144
     Width = 41
     Height = 33
     Caption = '+'
@@ -242,7 +242,7 @@ object FrMain: TFrMain
   end
   object BtMinus: TButton
     Left = 168
-    Top = 144
+    Top = 184
     Width = 41
     Height = 33
     Caption = '-'
@@ -258,7 +258,7 @@ object FrMain: TFrMain
   end
   object BtMultip: TButton
     Left = 168
-    Top = 184
+    Top = 224
     Width = 41
     Height = 33
     Caption = '*'
@@ -274,7 +274,7 @@ object FrMain: TFrMain
   end
   object BtDiv: TButton
     Left = 168
-    Top = 224
+    Top = 264
     Width = 41
     Height = 33
     Caption = '/'
@@ -338,7 +338,7 @@ object FrMain: TFrMain
   end
   object BtSin: TButton
     Left = 16
-    Top = 264
+    Top = 104
     Width = 41
     Height = 33
     Caption = 'sin'
@@ -352,7 +352,7 @@ object FrMain: TFrMain
   end
   object BtCos: TButton
     Left = 64
-    Top = 264
+    Top = 104
     Width = 41
     Height = 33
     Caption = 'cos'
@@ -366,7 +366,7 @@ object FrMain: TFrMain
   end
   object BtSqrt: TButton
     Left = 112
-    Top = 264
+    Top = 104
     Width = 41
     Height = 33
     Caption = 'sqrt'
@@ -380,10 +380,10 @@ object FrMain: TFrMain
   end
   object BtPow: TButton
     Left = 168
-    Top = 264
+    Top = 104
     Width = 41
     Height = 33
-    Caption = 'x^n'
+    Caption = '^'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -16
@@ -391,5 +391,6 @@ object FrMain: TFrMain
     Font.Style = []
     ParentFont = False
     TabOrder = 23
+    OnClick = SignClick
   end
 end

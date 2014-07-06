@@ -31,6 +31,10 @@ __published:	// IDE-managed Components
         TButton *BtC;
         TButton *BtDel;
         TButton *BtHist;
+        TButton *BtSin;
+        TButton *BtCos;
+        TButton *BtSqrt;
+        TButton *BtPow;
         void __fastcall NumClick(TObject *Sender);
         void __fastcall SignClick(TObject *Sender);
         void __fastcall BtCClick(TObject *Sender);

@@ -14,7 +14,9 @@ __fastcall TFrHist::TFrHist(TComponent* Owner)
         : TForm(Owner)
 {
   L_tmp=new TStringList;
+  FileSetAttr("hist.calc",32);
   MmHist->Lines->LoadFromFile("hist.calc");
+  FileSetAttr("hist.calc",6);
 }
 //---------------------------------------------------------------------------
 void __fastcall TFrHist::BtClearHistClick(TObject *Sender)
@@ -30,7 +32,9 @@ void __fastcall TFrHist::BtClearHistClick(TObject *Sender)
 
 void __fastcall TFrHist::BtUpdClick(TObject *Sender)
 {
+  FileSetAttr("hist.calc",32);
   MmHist->Lines->LoadFromFile("hist.calc");
+  FileSetAttr("hist.calc",6);
 }
 //---------------------------------------------------------------------------
 

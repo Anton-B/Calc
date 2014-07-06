@@ -34,7 +34,7 @@ object FrHist: TFrHist
     Left = 18
     Top = 128
     Width = 361
-    Height = 257
+    Height = 249
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -13

@@ -391,5 +391,6 @@ object FrMain: TFrMain
     Font.Style = []
     ParentFont = False
     TabOrder = 23
+    OnClick = SignClick
   end
 end
