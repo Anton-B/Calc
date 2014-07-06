@@ -18,7 +18,6 @@ __fastcall TFrMain::TFrMain(TComponent* Owner)
   if (FileExists("hist.calc"))
     L_Hist->LoadFromFile("hist.calc");
   L_Num->Add("0");
-  //FileCreate("hist.calc");
   flCom=0;
   fl=0;
   flRes=0;
@@ -126,7 +125,7 @@ void __fastcall TFrMain::BtResClick(TObject *Sender)
   Ed1->SelStart=strL+1;
   FileSetAttr("hist.calc",32);
   L_Hist->SaveToFile("hist.calc");
-  //FileSetAttr("hist.calc",6);
+  FileSetAttr("hist.calc",6);
 }
 //---------------------------------------------------------------------------
 

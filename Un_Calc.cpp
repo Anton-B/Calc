@@ -18,7 +18,6 @@ __fastcall TFrMain::TFrMain(TComponent* Owner)
   if (FileExists("hist.calc"))
     L_Hist->LoadFromFile("hist.calc");
   L_Num->Add("0");
-  //FileCreate("hist.calc");
   flCom=0;
   fl=0;
   flRes=0;

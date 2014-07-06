@@ -1,9 +1,9 @@
 object FrMain: TFrMain
-  Left = 1593
-  Top = 285
+  Left = 1561
+  Top = 259
   BorderStyle = bsDialog
   Caption = #1050#1072#1083#1100#1082#1091#1083#1103#1090#1086#1088
-  ClientHeight = 279
+  ClientHeight = 316
   ClientWidth = 227
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -40,7 +40,7 @@ object FrMain: TFrMain
     Caption = '0'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -19
+    Font.Height = -16
     Font.Name = 'MS Sans Serif'
     Font.Style = []
     ParentFont = False
@@ -56,7 +56,7 @@ object FrMain: TFrMain
     Caption = '1'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -19
+    Font.Height = -16
     Font.Name = 'MS Sans Serif'
     Font.Style = []
     ParentFont = False
@@ -72,7 +72,7 @@ object FrMain: TFrMain
     Caption = '2'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -19
+    Font.Height = -16
     Font.Name = 'MS Sans Serif'
     Font.Style = []
     ParentFont = False
@@ -88,7 +88,7 @@ object FrMain: TFrMain
     Caption = '3'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -19
+    Font.Height = -16
     Font.Name = 'MS Sans Serif'
     Font.Style = []
     ParentFont = False
@@ -104,7 +104,7 @@ object FrMain: TFrMain
     Caption = '4'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -19
+    Font.Height = -16
     Font.Name = 'MS Sans Serif'
     Font.Style = []
     ParentFont = False
@@ -120,7 +120,7 @@ object FrMain: TFrMain
     Caption = '5'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -19
+    Font.Height = -16
     Font.Name = 'MS Sans Serif'
     Font.Style = []
     ParentFont = False
@@ -136,7 +136,7 @@ object FrMain: TFrMain
     Caption = '6'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -19
+    Font.Height = -16
     Font.Name = 'MS Sans Serif'
     Font.Style = []
     ParentFont = False
@@ -152,7 +152,7 @@ object FrMain: TFrMain
     Caption = '7'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -19
+    Font.Height = -16
     Font.Name = 'MS Sans Serif'
     Font.Style = []
     ParentFont = False
@@ -168,7 +168,7 @@ object FrMain: TFrMain
     Caption = '8'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -19
+    Font.Height = -16
     Font.Name = 'MS Sans Serif'
     Font.Style = []
     ParentFont = False
@@ -184,7 +184,7 @@ object FrMain: TFrMain
     Caption = '9'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -19
+    Font.Height = -16
     Font.Name = 'MS Sans Serif'
     Font.Style = []
     ParentFont = False
@@ -200,7 +200,7 @@ object FrMain: TFrMain
     Caption = ','
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -19
+    Font.Height = -16
     Font.Name = 'MS Sans Serif'
     Font.Style = []
     ParentFont = False
@@ -216,7 +216,7 @@ object FrMain: TFrMain
     Caption = '='
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -19
+    Font.Height = -16
     Font.Name = 'MS Sans Serif'
     Font.Style = []
     ParentFont = False
@@ -232,7 +232,7 @@ object FrMain: TFrMain
     Caption = '+'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -19
+    Font.Height = -16
     Font.Name = 'MS Sans Serif'
     Font.Style = []
     ParentFont = False
@@ -248,7 +248,7 @@ object FrMain: TFrMain
     Caption = '-'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -19
+    Font.Height = -16
     Font.Name = 'MS Sans Serif'
     Font.Style = []
     ParentFont = False
@@ -264,7 +264,7 @@ object FrMain: TFrMain
     Caption = '*'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -19
+    Font.Height = -16
     Font.Name = 'MS Sans Serif'
     Font.Style = []
     ParentFont = False
@@ -280,7 +280,7 @@ object FrMain: TFrMain
     Caption = '/'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -19
+    Font.Height = -16
     Font.Name = 'MS Sans Serif'
     Font.Style = []
     ParentFont = False
@@ -296,7 +296,7 @@ object FrMain: TFrMain
     Caption = 'C'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -19
+    Font.Height = -16
     Font.Name = 'MS Sans Serif'
     Font.Style = []
     ParentFont = False
@@ -312,7 +312,7 @@ object FrMain: TFrMain
     Caption = '<--'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -19
+    Font.Height = -16
     Font.Name = 'MS Sans Serif'
     Font.Style = []
     ParentFont = False
@@ -328,12 +328,68 @@ object FrMain: TFrMain
     Caption = #1048#1089#1090#1086#1088#1080#1103
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -19
+    Font.Height = -16
     Font.Name = 'MS Sans Serif'
     Font.Style = []
     ParentFont = False
     TabOrder = 19
     TabStop = False
     OnClick = BtHistClick
+  end
+  object BtSin: TButton
+    Left = 16
+    Top = 264
+    Width = 41
+    Height = 33
+    Caption = 'sin'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 20
+  end
+  object BtCos: TButton
+    Left = 64
+    Top = 264
+    Width = 41
+    Height = 33
+    Caption = 'cos'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 21
+  end
+  object BtSqrt: TButton
+    Left = 112
+    Top = 264
+    Width = 41
+    Height = 33
+    Caption = 'sqrt'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 22
+  end
+  object BtPow: TButton
+    Left = 168
+    Top = 264
+    Width = 41
+    Height = 33
+    Caption = 'x^n'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 23
   end
 end
