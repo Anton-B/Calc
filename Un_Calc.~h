@@ -31,14 +31,11 @@ __published:	// IDE-managed Components
         TButton *BtC;
         TButton *BtDel;
         void __fastcall NumClick(TObject *Sender);
+        void __fastcall SignClick(TObject *Sender);
         void __fastcall BtCClick(TObject *Sender);
         void __fastcall FormCreate(TObject *Sender);
         void __fastcall BtDelClick(TObject *Sender);
         void __fastcall FormDestroy(TObject *Sender);
-        void __fastcall BtPlusClick(TObject *Sender);
-        void __fastcall BtMinusClick(TObject *Sender);
-        void __fastcall BtMultipClick(TObject *Sender);
-        void __fastcall BtDivClick(TObject *Sender);
         void __fastcall BtResClick(TObject *Sender);
 private:	// User declarations
 public:		// User declarations

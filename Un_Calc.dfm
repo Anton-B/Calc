@@ -239,7 +239,7 @@ object FrMain: TFrMain
     ParentFont = False
     TabOrder = 13
     TabStop = False
-    OnClick = BtPlusClick
+    OnClick = SignClick
   end
   object BtMinus: TButton
     Left = 168
@@ -255,7 +255,7 @@ object FrMain: TFrMain
     ParentFont = False
     TabOrder = 14
     TabStop = False
-    OnClick = BtMinusClick
+    OnClick = SignClick
   end
   object BtMultip: TButton
     Left = 168
@@ -271,7 +271,7 @@ object FrMain: TFrMain
     ParentFont = False
     TabOrder = 15
     TabStop = False
-    OnClick = BtMultipClick
+    OnClick = SignClick
   end
   object BtDiv: TButton
     Left = 168
@@ -287,7 +287,7 @@ object FrMain: TFrMain
     ParentFont = False
     TabOrder = 16
     TabStop = False
-    OnClick = BtDivClick
+    OnClick = SignClick
   end
   object BtC: TButton
     Left = 16

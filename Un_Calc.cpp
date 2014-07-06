@@ -34,7 +34,6 @@ void __fastcall TFrMain::FormDestroy(TObject *Sender)
 
 void __fastcall TFrMain::BtCClick(TObject *Sender)
 {
-  Ed1->SetFocus();
   flCom=0;
   fl=0;
   flRes=0;
@@ -42,12 +41,12 @@ void __fastcall TFrMain::BtCClick(TObject *Sender)
   List->Clear();
   L_Num->Clear();
   L_Num->Add("0");
+  Ed1->SetFocus();
 }
 //---------------------------------------------------------------------------
 
 void __fastcall TFrMain::BtDelClick(TObject *Sender)
 {
-  Ed1->SetFocus();
   if (List->Count==0)
     return;
   AnsiString s1=List->Strings[List->Count-1], s2;
@@ -68,116 +67,13 @@ void __fastcall TFrMain::BtDelClick(TObject *Sender)
   {
     BtCClick(Owner);
   }
-}
-//---------------------------------------------------------------------------
-
-void __fastcall TFrMain::BtPlusClick(TObject *Sender)
-{
-  str=Ed1->Text;
-  strL=str.Length();
-  if (strL==18)
-    return;
   Ed1->SetFocus();
-  if (flRes==1)
-  {
-    List->Clear();
-    List->Add(s_res);
-  }
-  flRes=0;
-  if (fl==1)
-    return;
-  fl=1;
-  if (Ed1->Text=="")
-    Ed1->Text="0";
-  List->Add("+");
-  L_Num->Strings[0]=Ed1->Text;
-  L_Num->Add("+");
-  Ed1->Text=Ed1->Text+"+";
-  flCom=0;
-}
-//---------------------------------------------------------------------------
-
-void __fastcall TFrMain::BtMinusClick(TObject *Sender)
-{
-  str=Ed1->Text;
-  strL=str.Length();
-  if (strL==18)
-    return;
-  Ed1->SetFocus();
-  if (flRes==1)
-  {
-    List->Clear();
-    List->Add(s_res);
-  }
-  flRes=0;
-  if (fl==1)
-    return;
-  fl=1;
-  if (Ed1->Text=="")
-    Ed1->Text="0";
-  List->Add("-");
-  L_Num->Strings[0]=Ed1->Text;
-  L_Num->Add("-");
-  Ed1->Text=Ed1->Text+"-";
-  flCom=0;
-}
-//---------------------------------------------------------------------------
-
-void __fastcall TFrMain::BtMultipClick(TObject *Sender)
-{
-  str=Ed1->Text;
-  strL=str.Length();
-  if (strL==18)
-    return;
-  Ed1->SetFocus();
-  if (flRes==1)
-  {
-    List->Clear();
-    List->Add(s_res);
-  }
-  flRes=0;
-  if (fl==1)
-    return;
-  fl=1;
-  if (Ed1->Text=="")
-    Ed1->Text="0";
-  List->Add("*");
-  L_Num->Strings[0]=Ed1->Text;
-  L_Num->Add("*");
-  Ed1->Text=Ed1->Text+"*";
-  flCom=0;
-}
-//---------------------------------------------------------------------------
-
-void __fastcall TFrMain::BtDivClick(TObject *Sender)
-{
-  str=Ed1->Text;
-  strL=str.Length();
-  if (strL==18)
-    return;
-  Ed1->SetFocus();
-  if (flRes==1)
-  {
-    List->Clear();
-    List->Add(s_res);
-  }
-  flRes=0;
-  if (fl==1)
-    return;
-  fl=1;
-  if (Ed1->Text=="")
-    Ed1->Text="0";
-  List->Add("/");
-  L_Num->Strings[0]=Ed1->Text;
-  L_Num->Add("/");
-  Ed1->Text=Ed1->Text+"/";
-  flCom=0;
+  Ed1->SelStart=strL;
 }
 //---------------------------------------------------------------------------
 
 void __fastcall TFrMain::BtResClick(TObject *Sender)
 {
-  Ed1->SetFocus();
   flCom=0;
   fl=0;
   AnsiString s0,s;
@@ -206,7 +102,7 @@ void __fastcall TFrMain::BtResClick(TObject *Sender)
     {
       if (StrToFloat(s)==0)
       {
-        MessageDlg("??????? ?? ???? ??????????!",mtInformation,TMsgDlgButtons()<<mbOK,0);
+        MessageDlg("Деление на ноль невозможно!",mtInformation,TMsgDlgButtons()<<mbOK,0);
         return;
       }
       else
@@ -215,7 +111,7 @@ void __fastcall TFrMain::BtResClick(TObject *Sender)
   }
   catch(...)
   {
-    MessageDlg("??????????, ????????? ???????????? ????? ??????.",mtError,TMsgDlgButtons()<<mbOK,0);
+    MessageDlg("Пожалуйста, проверьте корректность ввода данных.",mtError,TMsgDlgButtons()<<mbOK,0);
     return;
   }
   L_Num->Clear();
@@ -223,6 +119,8 @@ void __fastcall TFrMain::BtResClick(TObject *Sender)
   L_Num->Add(s_res);
   List->Add(s_res);
   flRes=1;
+  Ed1->SetFocus();
+  Ed1->SelStart=strL+1;
 }
 //---------------------------------------------------------------------------
 
@@ -248,8 +146,33 @@ void __fastcall TFrMain::NumClick(TObject *Sender)
   List->Add(((TButton*)Sender)->Caption);
   Ed1->Text=Ed1->Text+((TButton*)Sender)->Caption;
   Ed1->SetFocus();
-  Ed1->SelLength=0;
   Ed1->SelStart=strL+1;
 }
 //---------------------------------------------------------------------------
 
+void __fastcall TFrMain::SignClick(TObject *Sender)
+{
+  str=Ed1->Text;
+  strL=str.Length();
+  if (strL==18)
+    return;
+  if (flRes==1)
+  {
+    List->Clear();
+    List->Add(s_res);
+  }
+  flRes=0;
+  if (fl==1)
+    return;
+  fl=1;
+  if (Ed1->Text=="")
+    Ed1->Text="0";
+  List->Add(((TButton*)Sender)->Caption);
+  L_Num->Strings[0]=Ed1->Text;
+  L_Num->Add(((TButton*)Sender)->Caption);
+  Ed1->Text=Ed1->Text+((TButton*)Sender)->Caption;
+  flCom=0;
+  Ed1->SetFocus();
+  Ed1->SelStart=strL+1;
+}
+//---------------------------------------------------------------------------
