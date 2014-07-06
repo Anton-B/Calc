@@ -1,6 +1,6 @@
 object FrMain: TFrMain
-  Left = 1541
-  Top = 306
+  Left = 1593
+  Top = 285
   BorderStyle = bsDialog
   Caption = #1050#1072#1083#1100#1082#1091#1083#1103#1090#1086#1088
   ClientHeight = 279
@@ -13,7 +13,6 @@ object FrMain: TFrMain
   Font.Style = []
   OldCreateOrder = False
   Position = poScreenCenter
-  OnCreate = FormCreate
   OnDestroy = FormDestroy
   PixelsPerInch = 96
   TextHeight = 13

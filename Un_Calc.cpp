@@ -12,16 +12,13 @@ TFrMain *FrMain;
 __fastcall TFrMain::TFrMain(TComponent* Owner)
         : TForm(Owner)
 {
-}
-//---------------------------------------------------------------------------
-
-void __fastcall TFrMain::FormCreate(TObject *Sender)
-{
   List=new TStringList;
   L_Num=new TStringList;
   L_Hist=new TStringList;
+  if (FileExists("hist.calc"))
+    L_Hist->LoadFromFile("hist.calc");
   L_Num->Add("0");
-  L_Hist->LoadFromFile("calc_hist.calc");
+  //FileCreate("hist.calc");
   flCom=0;
   fl=0;
   flRes=0;
@@ -120,17 +117,16 @@ void __fastcall TFrMain::BtResClick(TObject *Sender)
   }
   L_Num->Clear();
   L_Hist->Add(Ed1->Text);
-  L_Hist->Strings[0]=L_Hist->Strings[L_Hist->Count-1]+"="+s_res;
+  L_Hist->Strings[L_Hist->Count-1]=L_Hist->Strings[L_Hist->Count-1]+"="+s_res;
   Ed1->Text=s_res;
   L_Num->Add(s_res);
   List->Add(s_res);
   flRes=1;
   Ed1->SetFocus();
   Ed1->SelStart=strL+1;
-  FileSetAttr("calc_hist.calc",32);
-  L_Hist->SaveToFile("calc_hist.calc");
-  //FileSetAttr("calc_hist.calc",6);
-  
+  FileSetAttr("hist.calc",32);
+  L_Hist->SaveToFile("hist.calc");
+  FileSetAttr("hist.calc",6);
 }
 //---------------------------------------------------------------------------
 

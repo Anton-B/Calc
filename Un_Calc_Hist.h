@@ -12,11 +12,14 @@ class TFrHist : public TForm
 {
 __published:	// IDE-managed Components
         TLabel *Lb1;
-        TMemo *Memo1;
+        TMemo *MmHist;
         TButton *BtClearHist;
+        TButton *BtUpd;
         void __fastcall BtClearHistClick(TObject *Sender);
+        void __fastcall BtUpdClick(TObject *Sender);
 private:	// User declarations
 public:		// User declarations
+        TStringList *L_tmp;
         __fastcall TFrHist(TComponent* Owner);
 };
 //---------------------------------------------------------------------------

@@ -13,11 +13,24 @@ TFrHist *FrHist;
 __fastcall TFrHist::TFrHist(TComponent* Owner)
         : TForm(Owner)
 {
+  L_tmp=new TStringList;
+  MmHist->Lines->LoadFromFile("hist.calc");
 }
 //---------------------------------------------------------------------------
 void __fastcall TFrHist::BtClearHistClick(TObject *Sender)
 {
-
-  L_Hist->SaveToFile("calc_hist.calc");
+  FileSetAttr("hist.calc",32);
+  L_tmp->LoadFromFile("hist.calc");
+  L_tmp->Clear();
+  L_tmp->SaveToFile("hist.calc");
+  MmHist->Lines->LoadFromFile("hist.calc");
+  FileSetAttr("hist.calc",6);
 }
 //---------------------------------------------------------------------------
+
+void __fastcall TFrHist::BtUpdClick(TObject *Sender)
+{
+  MmHist->Lines->LoadFromFile("hist.calc");
+}
+//---------------------------------------------------------------------------
+
