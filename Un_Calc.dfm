@@ -349,6 +349,7 @@ object FrMain: TFrMain
     Font.Style = []
     ParentFont = False
     TabOrder = 20
+    OnClick = SpecSignClick
   end
   object BtCos: TButton
     Left = 64
@@ -363,6 +364,7 @@ object FrMain: TFrMain
     Font.Style = []
     ParentFont = False
     TabOrder = 21
+    OnClick = SpecSignClick
   end
   object BtSqrt: TButton
     Left = 112
@@ -377,6 +379,7 @@ object FrMain: TFrMain
     Font.Style = []
     ParentFont = False
     TabOrder = 22
+    OnClick = SpecSignClick
   end
   object BtPow: TButton
     Left = 168

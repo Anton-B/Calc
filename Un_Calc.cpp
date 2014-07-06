@@ -192,3 +192,31 @@ void __fastcall TFrMain::BtHistClick(TObject *Sender)
 }
 //---------------------------------------------------------------------------
 
+void __fastcall TFrMain::SpecSignClick(TObject *Sender)
+{
+  flCom=0;
+  str=Ed1->Text;
+  if (str.Length()==18)
+    return;
+  if (fl==1)
+    return;
+  fl=1;
+  if (str=="")
+    str=0;
+  List->Clear();
+  L_Num->Clear();
+  List->Add(((TButton*)Sender)->Caption+"(");
+  //if (flRes==1)
+  //{
+   //str=s_res;
+    flRes=0;
+  //}
+  List->Add(str+")");
+  L_Num->Add(str);
+  L_Num->Add(((TButton*)Sender)->Caption);
+  Ed1->Text=((TButton*)Sender)->Caption+"("+str+")";
+  Ed1->SetFocus();
+  Ed1->SelStart=Ed1->Text.Length()+1;
+}
+//---------------------------------------------------------------------------
+
