@@ -8,6 +8,8 @@
 #include <StdCtrls.hpp>
 #include <Forms.hpp>
 //---------------------------------------------------------------------------
+
+//---------------------------------------------------------------------------
 class TFrMain : public TForm
 {
 __published:	// IDE-managed Components
@@ -30,6 +32,7 @@ __published:	// IDE-managed Components
         TButton *BtDiv;
         TButton *BtC;
         TButton *BtDel;
+        TButton *BtHist;
         void __fastcall NumClick(TObject *Sender);
         void __fastcall SignClick(TObject *Sender);
         void __fastcall BtCClick(TObject *Sender);
@@ -37,6 +40,7 @@ __published:	// IDE-managed Components
         void __fastcall BtDelClick(TObject *Sender);
         void __fastcall FormDestroy(TObject *Sender);
         void __fastcall BtResClick(TObject *Sender);
+        void __fastcall BtHistClick(TObject *Sender);
 private:	// User declarations
 public:		// User declarations
         int flCom, fl, flRes, strL;

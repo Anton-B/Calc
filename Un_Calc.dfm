@@ -1,8 +1,8 @@
 object FrMain: TFrMain
-  Left = 1611
-  Top = 370
+  Left = 1541
+  Top = 306
   BorderStyle = bsDialog
-  Caption = 'Calc'
+  Caption = #1050#1072#1083#1100#1082#1091#1083#1103#1090#1086#1088
   ClientHeight = 279
   ClientWidth = 227
   Color = clBtnFace
@@ -290,9 +290,9 @@ object FrMain: TFrMain
     OnClick = SignClick
   end
   object BtC: TButton
-    Left = 16
+    Left = 112
     Top = 64
-    Width = 89
+    Width = 41
     Height = 33
     Caption = 'C'
     Font.Charset = DEFAULT_CHARSET
@@ -306,9 +306,9 @@ object FrMain: TFrMain
     OnClick = BtCClick
   end
   object BtDel: TButton
-    Left = 120
+    Left = 168
     Top = 64
-    Width = 89
+    Width = 41
     Height = 33
     Caption = '<--'
     Font.Charset = DEFAULT_CHARSET
@@ -320,5 +320,21 @@ object FrMain: TFrMain
     TabOrder = 18
     TabStop = False
     OnClick = BtDelClick
+  end
+  object BtHist: TButton
+    Left = 16
+    Top = 64
+    Width = 89
+    Height = 33
+    Caption = #1048#1089#1090#1086#1088#1080#1103
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -19
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 19
+    TabStop = False
+    OnClick = BtHistClick
   end
 end

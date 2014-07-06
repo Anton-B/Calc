@@ -30,6 +30,7 @@ __published:	// IDE-managed Components
         TButton *BtDiv;
         TButton *BtC;
         TButton *BtDel;
+        TButton *BtHist;
         void __fastcall NumClick(TObject *Sender);
         void __fastcall SignClick(TObject *Sender);
         void __fastcall BtCClick(TObject *Sender);
@@ -37,11 +38,12 @@ __published:	// IDE-managed Components
         void __fastcall BtDelClick(TObject *Sender);
         void __fastcall FormDestroy(TObject *Sender);
         void __fastcall BtResClick(TObject *Sender);
+        void __fastcall BtHistClick(TObject *Sender);
 private:	// User declarations
 public:		// User declarations
         int flCom, fl, flRes, strL;
         AnsiString s_res,str;
-        TStringList *List,*L_Num;
+        TStringList *List,*L_Num,*L_Hist;
         __fastcall TFrMain(TComponent* Owner);
 };
 //---------------------------------------------------------------------------

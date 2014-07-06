@@ -3,6 +3,7 @@
 #pragma hdrstop
 
 #include "Un_Calc.h"
+#include "Un_Calc_Hist.h"
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 #pragma resource "*.dfm"
@@ -18,7 +19,9 @@ void __fastcall TFrMain::FormCreate(TObject *Sender)
 {
   List=new TStringList;
   L_Num=new TStringList;
+  L_Hist=new TStringList;
   L_Num->Add("0");
+  L_Hist->LoadFromFile("calc_hist.calc");
   flCom=0;
   fl=0;
   flRes=0;
@@ -29,6 +32,7 @@ void __fastcall TFrMain::FormDestroy(TObject *Sender)
 {
   delete List;
   delete L_Num;
+  delete L_Hist;
 }
 //---------------------------------------------------------------------------
 
@@ -115,12 +119,18 @@ void __fastcall TFrMain::BtResClick(TObject *Sender)
     return;
   }
   L_Num->Clear();
+  L_Hist->Add(Ed1->Text);
+  L_Hist->Strings[0]=L_Hist->Strings[L_Hist->Count-1]+"="+s_res;
   Ed1->Text=s_res;
   L_Num->Add(s_res);
   List->Add(s_res);
   flRes=1;
   Ed1->SetFocus();
   Ed1->SelStart=strL+1;
+  FileSetAttr("calc_hist.calc",32);
+  L_Hist->SaveToFile("calc_hist.calc");
+  //FileSetAttr("calc_hist.calc",6);
+  
 }
 //---------------------------------------------------------------------------
 
@@ -176,3 +186,11 @@ void __fastcall TFrMain::SignClick(TObject *Sender)
   Ed1->SelStart=strL+1;
 }
 //---------------------------------------------------------------------------
+void __fastcall TFrMain::BtHistClick(TObject *Sender)
+{
+  FrHist->ShowModal();
+  Ed1->SetFocus();
+  Ed1->SelStart=strL+1;
+}
+//---------------------------------------------------------------------------
+
