@@ -94,11 +94,11 @@ void __fastcall TFrMain::BtResClick(TObject *Sender)
   try
   {
     if (L_Num->Strings[1]=="+")
-      s_res=FloatToStr(StrToFloat(L_Num->Strings[0])+StrToFloat(s));
+      s_res=FloatToStr(StrToFloat(s0)+StrToFloat(s));
     else if (L_Num->Strings[1]=="-")
-      s_res=FloatToStr(StrToFloat(L_Num->Strings[0])-StrToFloat(s));
+      s_res=FloatToStr(StrToFloat(s0)-StrToFloat(s));
     else if (L_Num->Strings[1]=="*")
-      s_res=FloatToStr(StrToFloat(L_Num->Strings[0])*StrToFloat(s));
+      s_res=FloatToStr(StrToFloat(s0)*StrToFloat(s));
     else if (L_Num->Strings[1]=="/")
     {
       if (StrToFloat(s)==0)
@@ -107,10 +107,16 @@ void __fastcall TFrMain::BtResClick(TObject *Sender)
         return;
       }
       else
-        s_res=FloatToStr(StrToFloat(L_Num->Strings[0])/StrToFloat(s));
+        s_res=FloatToStr(StrToFloat(s0)/StrToFloat(s));
     }
     else if (L_Num->Strings[1]=="^")
-      s_res=FloatToStr(pow(StrToFloat(L_Num->Strings[0]),StrToFloat(s)));
+      s_res=FloatToStr(pow(StrToFloat(s0),StrToFloat(s)));
+    else if (L_Num->Strings[1]=="sin")
+      s_res=FloatToStr(sin(StrToFloat(s0)));
+    else if (L_Num->Strings[1]=="cos")
+      s_res=FloatToStr(cos(StrToFloat(s0)));
+    else if (L_Num->Strings[1]=="sin")
+      s_res=FloatToStr(sqrt(StrToFloat(s0)));
   }
   catch(...)
   {
@@ -196,13 +202,13 @@ void __fastcall TFrMain::SpecSignClick(TObject *Sender)
 {
   flCom=0;
   str=Ed1->Text;
-  if (str=="")
-    str=0;
   if (str.Length()==18)
     return;
   if (fl==1)
     return;
   fl=1;
+  if (str=="")
+    str="0";
   List->Clear();
   L_Num->Clear();
   List->Add(((TButton*)Sender)->Caption+"(");
@@ -219,4 +225,3 @@ void __fastcall TFrMain::SpecSignClick(TObject *Sender)
   Ed1->SelStart=Ed1->Text.Length()+1;
 }
 //---------------------------------------------------------------------------
-
