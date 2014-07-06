@@ -1,5 +1,4 @@
-//---------------------------------------------------------------------------
-
+//---------------------------------------------------------------------------                                                                                                                                      //---------------------------------------------------------------------------
 #include <vcl.h>
 #pragma hdrstop
 
@@ -33,207 +32,6 @@ void __fastcall TFrMain::FormDestroy(TObject *Sender)
 }
 //---------------------------------------------------------------------------
 
-void __fastcall TFrMain::Bt0Click(TObject *Sender)
-{
-  str=Ed1->Text;
-  strL=str.Length();
-  if (strL==18)
-    return;
-  Ed1->SetFocus();
-  if (flRes==1)
-  {
-    Ed1->Text="";
-    List->Clear();
-  }
-  List->Add("0");
-  Ed1->Text=Ed1->Text+"0";
-
-}
-//---------------------------------------------------------------------------
-
-void __fastcall TFrMain::Bt1Click(TObject *Sender)
-{
-  str=Ed1->Text;
-  strL=str.Length();
-  if (strL==18)
-    return;
-  Ed1->SetFocus();
-  if (flRes==1)
-  {
-    Ed1->Text="";
-    List->Clear();
-  }
-  flRes=0;
-  List->Add("1");
-  Ed1->Text=Ed1->Text+"1";
-}
-//---------------------------------------------------------------------------
-
-void __fastcall TFrMain::Bt2Click(TObject *Sender)
-{
-  str=Ed1->Text;
-  strL=str.Length();
-  if (strL==18)
-    return;
-  Ed1->SetFocus();
-  if (flRes==1)
-  {
-    Ed1->Text="";
-    List->Clear();
-  }
-  flRes=0;
-  List->Add("2");
-  Ed1->Text=Ed1->Text+"2";
-}
-//---------------------------------------------------------------------------
-
-void __fastcall TFrMain::Bt3Click(TObject *Sender)
-{
-  str=Ed1->Text;
-  strL=str.Length();
-  if (strL==18)
-    return;
-  Ed1->SetFocus();
-  if (flRes==1)
-  {
-    Ed1->Text="";
-    List->Clear();
-  }
-  flRes=0;
-  List->Add("3");
-  Ed1->Text=Ed1->Text+"3";
-}
-//---------------------------------------------------------------------------
-
-void __fastcall TFrMain::Bt4Click(TObject *Sender)
-{
-  str=Ed1->Text;
-  strL=str.Length();
-  if (strL==18)
-    return;
-  Ed1->SetFocus();
-  if (flRes==1)
-  {
-    Ed1->Text="";
-    List->Clear();
-  }
-  flRes=0;
-  List->Add("4");
-  Ed1->Text=Ed1->Text+"4";
-}
-//---------------------------------------------------------------------------
-
-void __fastcall TFrMain::Bt5Click(TObject *Sender)
-{
-  str=Ed1->Text;
-  strL=str.Length();
-  if (strL==18)
-    return;
-  Ed1->SetFocus();
-  if (flRes==1)
-  {
-    Ed1->Text="";
-    List->Clear();
-  }
-  flRes=0;
-  List->Add("5");
-  Ed1->Text=Ed1->Text+"5";
-}
-//---------------------------------------------------------------------------
-
-void __fastcall TFrMain::Bt6Click(TObject *Sender)
-{
-  str=Ed1->Text;
-  strL=str.Length();
-  if (strL==18)
-    return;
-  Ed1->SetFocus();
-  if (flRes==1)
-  {
-    Ed1->Text="";
-    List->Clear();
-  }
-  flRes=0;
-  List->Add("6");
-  Ed1->Text=Ed1->Text+"6";
-}
-//---------------------------------------------------------------------------
-
-void __fastcall TFrMain::Bt7Click(TObject *Sender)
-{
-  str=Ed1->Text;
-  strL=str.Length();
-  if (strL==18)
-    return;
-  Ed1->SetFocus();
-  if (flRes==1)
-  {
-    Ed1->Text="";
-    List->Clear();
-  }
-  flRes=0;
-  List->Add("7");
-  Ed1->Text=Ed1->Text+"7";
-}
-//---------------------------------------------------------------------------
-
-void __fastcall TFrMain::Bt8Click(TObject *Sender)
-{
-  str=Ed1->Text;
-  strL=str.Length();
-  if (strL==18)
-    return;
-  Ed1->SetFocus();
-  if (flRes==1)
-  {
-    Ed1->Text="";
-    List->Clear();
-  }
-  flRes=0;
-  List->Add("8");
-  Ed1->Text=Ed1->Text+"8";
-}
-//---------------------------------------------------------------------------
-
-void __fastcall TFrMain::Bt9Click(TObject *Sender)
-{
-  str=Ed1->Text;
-  strL=str.Length();
-  if (strL==18)
-    return;
-  Ed1->SetFocus();
-  if (flRes==1)
-  {
-    Ed1->Text="";
-    List->Clear();
-  }
-  flRes=0;
-  List->Add("9");
-  Ed1->Text=Ed1->Text+"9";
-}
-//---------------------------------------------------------------------------
-
-void __fastcall TFrMain::BtComClick(TObject *Sender)
-{
-  str=Ed1->Text;
-  strL=str.Length();
-  if (strL==18)
-    return;
-  Ed1->SetFocus();
-  if (flRes==1)
-  {
-    Ed1->Text="";
-    List->Clear();
-  }
-  flRes=0;
-  if (flCom==1)
-    return;
-  flCom=1;
-  List->Add(",");
-  Ed1->Text=Ed1->Text+",";
-}
-//---------------------------------------------------------------------------
-
 void __fastcall TFrMain::BtCClick(TObject *Sender)
 {
   Ed1->SetFocus();
@@ -258,8 +56,7 @@ void __fastcall TFrMain::BtDelClick(TObject *Sender)
   else if ((s1=="+")||(s1=="-")||(s1=="*")||(s1=="/"))
   {
       fl=0;
-      L_Num->Delete(1);
-
+      L_Num->Delete(1); 
   }
   List->Delete(List->Count-1);
   for (int i=0;i<(List->Count);i++)
@@ -269,12 +66,7 @@ void __fastcall TFrMain::BtDelClick(TObject *Sender)
   Ed1->Text=s2;
   if (Ed1->Text=="")
   {
-    List->Clear();
-    L_Num->Clear();
-    L_Num->Add("0");
-    flCom=0;
-    fl=0;
-    flRes=0;
+    BtCClick(Owner);
   }
 }
 //---------------------------------------------------------------------------
@@ -414,9 +206,7 @@ void __fastcall TFrMain::BtResClick(TObject *Sender)
     {
       if (StrToFloat(s)==0)
       {
-        MessageDlg("Деление на ноль невозможно!",mtInformation,
-                   TMsgDlgButtons()<<mbOK,0);
-
+        MessageDlg("??????? ?? ???? ??????????!",mtInformation,TMsgDlgButtons()<<mbOK,0);
         return;
       }
       else
@@ -425,8 +215,7 @@ void __fastcall TFrMain::BtResClick(TObject *Sender)
   }
   catch(...)
   {
-    MessageDlg("Пожалуйста, проверьте корректность ввода данных.",mtError,
-                   TMsgDlgButtons()<<mbOK,0);
+    MessageDlg("??????????, ????????? ???????????? ????? ??????.",mtError,TMsgDlgButtons()<<mbOK,0);
     return;
   }
   L_Num->Clear();
@@ -437,73 +226,30 @@ void __fastcall TFrMain::BtResClick(TObject *Sender)
 }
 //---------------------------------------------------------------------------
 
-void __fastcall TFrMain::Ed1KeyUp(TObject *Sender, WORD &Key,
-      TShiftState Shift)
+void __fastcall TFrMain::NumClick(TObject *Sender)
 {
-  switch (Key)
+  if(((TButton*)Sender)->Caption==",")
   {
-  case VK_NUMPAD0:
-  case '0':
-    Bt0Click(Owner);
-    break;
-  case VK_NUMPAD1:
-  case '1':
-    Bt1Click(Owner);
-    break;
-  case VK_NUMPAD2:
-  case '2':
-    Bt2Click(Owner);
-    break;
-  case VK_NUMPAD3:
-  case '3':
-    Bt3Click(Owner);
-    break;
-  case VK_NUMPAD4:
-  case '4':
-    Bt4Click(Owner);
-    break;
-  case VK_NUMPAD5:
-  case '5':
-    Bt5Click(Owner);
-    break;
-  case VK_NUMPAD6:
-  case '6':
-    Bt6Click(Owner);
-    break;
-  case VK_NUMPAD7:
-  case '7':
-    Bt7Click(Owner);
-    break;
-  case VK_NUMPAD8:
-  case '8':
-    Bt8Click(Owner);
-    break;
-  case VK_NUMPAD9:
-  case '9':
-    Bt9Click(Owner);
-    break;
-  case ',':
-    BtComClick(Owner);
-    break;
-  case 0xBB:
-    BtResClick(Owner);
-    break;
-  case VK_ADD:
-    BtPlusClick(Owner);
-    break;
-  case VK_SUBTRACT:
-    BtMinusClick(Owner);
-    break;
-  case VK_MULTIPLY:
-    BtMultipClick(Owner);
-    break;
-  case VK_DIVIDE:
-    BtDivClick(Owner);
-    break;
-  case VK_BACK:
-    BtDelClick(Owner);
-    break;
+    if(flCom==1)
+      return;
+    else
+      flCom=1;
   }
+  str=Ed1->Text;
+  strL=str.Length();
+  if (strL==18)
+    return;
+  if (flRes==1)
+  {
+    Ed1->Text="";
+    List->Clear();
+  }
+  flRes=0;
+  List->Add(((TButton*)Sender)->Caption);
+  Ed1->Text=Ed1->Text+((TButton*)Sender)->Caption;
+  Ed1->SetFocus();
+  Ed1->SelLength=0;
+  Ed1->SelStart=strL+1;
 }
 //---------------------------------------------------------------------------
 

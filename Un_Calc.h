@@ -30,17 +30,7 @@ __published:	// IDE-managed Components
         TButton *BtDiv;
         TButton *BtC;
         TButton *BtDel;
-        void __fastcall Bt0Click(TObject *Sender);
-        void __fastcall Bt1Click(TObject *Sender);
-        void __fastcall Bt2Click(TObject *Sender);
-        void __fastcall Bt3Click(TObject *Sender);
-        void __fastcall Bt4Click(TObject *Sender);
-        void __fastcall Bt5Click(TObject *Sender);
-        void __fastcall Bt6Click(TObject *Sender);
-        void __fastcall Bt7Click(TObject *Sender);
-        void __fastcall Bt8Click(TObject *Sender);
-        void __fastcall Bt9Click(TObject *Sender);
-        void __fastcall BtComClick(TObject *Sender);
+        void __fastcall NumClick(TObject *Sender);
         void __fastcall BtCClick(TObject *Sender);
         void __fastcall FormCreate(TObject *Sender);
         void __fastcall BtDelClick(TObject *Sender);
@@ -50,8 +40,6 @@ __published:	// IDE-managed Components
         void __fastcall BtMultipClick(TObject *Sender);
         void __fastcall BtDivClick(TObject *Sender);
         void __fastcall BtResClick(TObject *Sender);
-        void __fastcall Ed1KeyUp(TObject *Sender, WORD &Key,
-          TShiftState Shift);
 private:	// User declarations
 public:		// User declarations
         int flCom, fl, flRes, strL;

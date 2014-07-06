@@ -32,7 +32,6 @@ object FrMain: TFrMain
     ParentFont = False
     ReadOnly = True
     TabOrder = 0
-    OnKeyUp = Ed1KeyUp
   end
   object Bt0: TButton
     Left = 16
@@ -48,7 +47,7 @@ object FrMain: TFrMain
     ParentFont = False
     TabOrder = 1
     TabStop = False
-    OnClick = Bt0Click
+    OnClick = NumClick
   end
   object Bt1: TButton
     Left = 16
@@ -64,7 +63,7 @@ object FrMain: TFrMain
     ParentFont = False
     TabOrder = 2
     TabStop = False
-    OnClick = Bt1Click
+    OnClick = NumClick
   end
   object Bt2: TButton
     Left = 64
@@ -80,7 +79,7 @@ object FrMain: TFrMain
     ParentFont = False
     TabOrder = 3
     TabStop = False
-    OnClick = Bt2Click
+    OnClick = NumClick
   end
   object Bt3: TButton
     Left = 112
@@ -96,7 +95,7 @@ object FrMain: TFrMain
     ParentFont = False
     TabOrder = 4
     TabStop = False
-    OnClick = Bt3Click
+    OnClick = NumClick
   end
   object Bt4: TButton
     Left = 16
@@ -112,7 +111,7 @@ object FrMain: TFrMain
     ParentFont = False
     TabOrder = 5
     TabStop = False
-    OnClick = Bt4Click
+    OnClick = NumClick
   end
   object Bt5: TButton
     Left = 64
@@ -128,7 +127,7 @@ object FrMain: TFrMain
     ParentFont = False
     TabOrder = 6
     TabStop = False
-    OnClick = Bt5Click
+    OnClick = NumClick
   end
   object Bt6: TButton
     Left = 112
@@ -144,7 +143,7 @@ object FrMain: TFrMain
     ParentFont = False
     TabOrder = 7
     TabStop = False
-    OnClick = Bt6Click
+    OnClick = NumClick
   end
   object Bt7: TButton
     Left = 16
@@ -160,7 +159,7 @@ object FrMain: TFrMain
     ParentFont = False
     TabOrder = 8
     TabStop = False
-    OnClick = Bt7Click
+    OnClick = NumClick
   end
   object Bt8: TButton
     Left = 64
@@ -176,7 +175,7 @@ object FrMain: TFrMain
     ParentFont = False
     TabOrder = 9
     TabStop = False
-    OnClick = Bt8Click
+    OnClick = NumClick
   end
   object Bt9: TButton
     Left = 112
@@ -192,7 +191,7 @@ object FrMain: TFrMain
     ParentFont = False
     TabOrder = 10
     TabStop = False
-    OnClick = Bt9Click
+    OnClick = NumClick
   end
   object BtCom: TButton
     Left = 64
@@ -208,7 +207,7 @@ object FrMain: TFrMain
     ParentFont = False
     TabOrder = 11
     TabStop = False
-    OnClick = BtComClick
+    OnClick = NumClick
   end
   object BtRes: TButton
     Left = 112
