@@ -16,9 +16,17 @@ __fastcall TFrMain::TFrMain(TComponent* Owner)
   List=new TStringList;
   L_Num=new TStringList;
   L_Hist=new TStringList;
-  if (FileExists("hist.calc"))
-    L_Hist->LoadFromFile("hist.calc");
   L_Num->Add("0");
+  try
+  {
+    L_Hist->LoadFromFile("hist.calc");
+  }
+  catch(...)
+  {
+    FileCreate("hist.calc");
+    MessageDlg("Программа подготовлена к работе.\nПожалуйста, запустите ее еще раз.",mtInformation,TMsgDlgButtons()<<mbOK,0);
+  }
+  FileSetAttr("hist.calc",6);
   flCom=0;
   fl=0;
   flRes=0;
